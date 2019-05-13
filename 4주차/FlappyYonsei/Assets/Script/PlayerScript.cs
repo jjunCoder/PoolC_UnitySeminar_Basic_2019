@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 namespace complete
 {
@@ -10,6 +11,9 @@ namespace complete
         public float kickForce_Y = 100.0f;
         public float imageTime = 1.0f;
 
+        public Button gameOverBtn;
+        public LevelScript levelController;
+
         Rigidbody2D rb2d;
 
         Animator anim;
@@ -20,7 +24,8 @@ namespace complete
         AudioSource[] sounds;
         AudioSource dieAudio;
         AudioSource wingAudio;
-
+        bool isAlive = true;
+        int threshold = 1;
 
         // Start is called before the first frame update
         void Start()
@@ -37,7 +42,13 @@ namespace complete
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if(transform.position.x > threshold*10)
+            {
+                levelController.CreateObstacleRandomly(transform.position.x);
+                threshold++;
+            }
+
+            if (isAlive && Input.GetKeyDown(KeyCode.Space))
             {
                 rb2d.AddForce(new Vector2(1 * kickForce_X , 1 * kickForce_Y));
                 anim.Play("PlayerFlap2");
@@ -54,6 +65,8 @@ namespace complete
             dieAudio.Play();
             anim.SetTrigger("PlayerDie");
             gameOverImage.SetActive(true);
+            isAlive = false;
+            gameOverBtn.gameObject.SetActive(true);
         }
     }
 }

@@ -1,14 +1,16 @@
 ﻿<Properties StartupConfiguration="{144FCAA7-FF22-6834-07C7-A36BC6F017A7}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/CameraScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/PlayerScript.cs">
     <Files>
-      <File FileName="Assets/Script/PlayerScript.cs" Line="18" Column="1" />
-      <File FileName="Assets/Script/CameraScript.cs" Line="15" Column="6" />
-      <File FileName="Assets/Script/BGScroll.cs" Line="25" Column="6" />
+      <File FileName="Assets/Script/CameraScript.cs" Line="25" Column="1" />
+      <File FileName="Assets/Script/BGScroll.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/UIController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/LevelScript.cs" Line="9" Column="6" />
+      <File FileName="Assets/Script/PlayerScript.cs" Line="28" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="8aed5068-a06a-400b-80e3-b771f99d4875" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="da6e8e96-03e6-4f5e-851c-723d149439ad" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
